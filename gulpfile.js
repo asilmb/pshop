@@ -26,7 +26,8 @@ gulp.task('desktop-common-js', function() {
         .pipe(uglify().on('error', function(e){
             console.log(e);
         }))
-        .pipe(gulp.dest('../public/js'));
+        .pipe(gulp.dest('./app/public/js'))
+        .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('desktop-sass', function() {
@@ -35,7 +36,8 @@ gulp.task('desktop-sass', function() {
         .pipe(rename({suffix: '.min', prefix : ''}))
         .pipe(autoprefixer(['last 15 versions']))
         .pipe(cleanCSS()) // Опционально, закомментировать при отладке
-        .pipe(gulp.dest('../public/css'))
+        .pipe(gulp.dest('./app/public/css'))
+        .pipe(gulp.dest('./public/css'))
         .pipe(browserSync.reload({stream: true}));
 });
 
@@ -47,7 +49,8 @@ gulp.task('mobile-common-js', function() {
         .pipe(uglify().on('error', function(e){
             console.log(e);
         }))
-        .pipe(gulp.dest('./../frontend/web/js'));
+        .pipe(gulp.dest('./app/public/js'))
+        .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('mobile-sass', function() {
@@ -56,14 +59,15 @@ gulp.task('mobile-sass', function() {
         .pipe(rename({suffix: '.mobile.min', prefix : ''}))
         .pipe(autoprefixer(['last 15 versions']))
         .pipe(cleanCSS()) // Опционально, закомментировать при отладке
-        .pipe(gulp.dest('./../frontend/web/css'))
+        .pipe(gulp.dest('./app/public/css'))
+        .pipe(gulp.dest('./public/css'))
         .pipe(browserSync.reload({stream: true}));
 });
 
 gulp.task('browser-sync', function() {
     browserSync({
         server: {
-            baseDir: ''
+            baseDir: './app'
         },
         notify: false,
         // tunnel: true,
@@ -74,9 +78,11 @@ gulp.task('browser-sync', function() {
 gulp.task('watch-desktop', ['desktop-sass', 'desktop-common-js', 'browser-sync'], function() {
     gulp.watch('app/desktop/sass/**/*.sass', ['desktop-sass']);
     gulp.watch('app/desktop/js/common.js', ['desktop-common-js']);
+    gulp.watch("app/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('watch-mobile', ['mobile-sass', 'mobile-common-js', 'browser-sync'], function() {
     gulp.watch('app/mobile/sass/**/*.sass', ['mobile-sass']);
     gulp.watch('app/mobile/js/common.js', ['mobile-common-js']);
+    gulp.watch("app/*.html").on('change', browserSync.reload);
 });
