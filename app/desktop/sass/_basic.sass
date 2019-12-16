@@ -1,2 +1,71 @@
-.container
-  width: 1196px
+html
+  width: 100%
+  height: 100vh
+  line-height: 1
+  font-size: 16px
+  font-family: Rubik
+
+body
+  width: 100%
+  height: 100vh
+  text-align: center
+  font-family: Rubik
+h1
+  font-size: 5vw
+  min-font-size: 14px
+h2
+  font-size: 4vh
+  min-font-size: 14px
+h3
+  font-size: 3vmin
+  min-font-size: 14px
+h4
+  font-size: 1.5vmax
+  min-font-size: 14px
+a,  p, span
+  font-size: 1vmax
+  min-font-size: 14px
+
+.navbar-collapse
+  flex-grow: 0
+
+.ps-btn, a.ps-btn
+  width: 180px
+  height: 40px
+  font-weight: bold
+  border-radius: 4px
+  font-size: 16px
+
+
+.bg-ps-outline-btn, a.bg-ps-outline-btn
+  border: 1px solid #D83135
+  color: #959595
+
+  &:active
+    background: rgba(207, 0, 0, 0.3)
+    color: #3C3C3C
+
+  &:hover
+    background: rgba(207, 0, 0, 0.15)
+    color: #3C3C3C
+
+.bg-ps-fill-btn, a.bg-ps-fill-btn
+  background: #D83135
+  color: #FFFFFF
+
+  &:active
+    background: rgba(207, 0, 0, 0.6)
+
+  &:hover
+    background: #A20000
+
+@media only screen and (min-width: 768px)
+/* tablets and desktop */
+
+
+@media only screen and (max-width: 767px)
+/* phones */
+
+
+@media only screen and (max-width: 767px) and (orientation: portrait)
+/* portrait phones */
