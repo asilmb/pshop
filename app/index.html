@@ -12,6 +12,7 @@
     <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.30.5/react-bootstrap.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -27,14 +28,18 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<header class="navbar navbar-expand-md fixed-top">
+<header class="navbar navbar-expand-md navbar-light  fixed-top">
     <div class="container">
-        <a class="navbar-brand col-sd-2" href="#"><img src="./img/logo.svg" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
                 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse col-sd-6" id="navbarsExampleDefault">
+        <a class="navbar-brand col-sd-2" href="#"><img src="./img/logo.svg" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#call-info"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-phone"></span>
+        </button>
+        <div class="collapse navbar-collapse col-sd-6" id="main-menu">
             <ul class="navbar-nav col-md-8">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -61,12 +66,23 @@
                     <a class="nav-link" href="#">Контакты</a>
                 </li>
             </ul>
-            <span class="col-md-4">
+            <span class="navbar-collapse_number col-md-4">
 				+7 701 756 46 91 8
 				<br/>
 				(7 212) 31‒22‒33
 			</span>
         </div>
+        <div class="collapse navbar-collapse col-sd-6" id="call-info">
+            <ul class="navbar-nav col-md-8">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Доставка</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Контакты</a>
+                </li>
+            </ul>
+        </div>
+
 
         <a class="btn ps-btn bg-ps-outline-btn col-sd-2" type="submit">Оформить заказ</a>
         <a class="btn ps-btn bg-ps-fill-btn col-sd-2" type="submit">Online заказ</a>

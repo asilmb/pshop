@@ -3,5 +3,27 @@ header
   font-weight: 500
   color: #959595
 
+@media only screen and (min-width: 768px)
+  header
+    #call-info
+     display: none!important
+
+@media only screen and (max-width: 1099px)
+  header
+    .navbar-collapse_number
+      display: none
+    a.ps-btn
+      width: 160px
+      height: 35px
+
+//mobile
+@media only screen and (max-width: 767px)
+  header.navbar
+    .container
+      display: flex
+      justify-content: space-around
+    a.ps-btn
+      display: none
+
 
 

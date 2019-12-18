@@ -12,19 +12,14 @@ body
   font-family: Rubik
 h1
   font-size: 5vw
-  min-font-size: 14px
 h2
   font-size: 4vh
-  min-font-size: 14px
 h3
   font-size: 3vmin
-  min-font-size: 14px
-h4
+h4, a.ps-btn
   font-size: 1.5vmax
-  min-font-size: 14px
-a,  p, span
+a,  p
   font-size: 1vmax
-  min-font-size: 14px
 
 .navbar-collapse
   flex-grow: 0
@@ -58,14 +53,20 @@ a,  p, span
 
   &:hover
     background: #A20000
+//desktop
+//@media only screen and (min-width: 768px)
+//  //html, body, a,  p, span, h1, h2, h3, h4,
+//  //  font-size: 14px
+//desktop - middle
+@media only screen and (max-width: 1199px)
+  html, body, a,  p, h1, h2, h3, h4, a.ps-btn
+    font-size: 14px
+  .container
+    max-width: 100%
+//mobile
+//@media only screen and (max-width: 767px)
 
-@media only screen and (min-width: 768px)
-/* tablets and desktop */
 
-
-@media only screen and (max-width: 767px)
-/* phones */
-
-
-@media only screen and (max-width: 767px) and (orientation: portrait)
-/* portrait phones */
+//@media only screen and (max-width: 767px) and (orientation: portrait)
+//  //html, body, a,  p, span, h1, h2, h3, h4
+//  //  font-size: 14px
