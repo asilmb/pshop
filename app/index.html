@@ -12,8 +12,8 @@
     <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/react-bootstrap/0.30.5/react-bootstrap.js"></script>
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/4a7a46cdf1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./public/css/app.min.css">
@@ -32,14 +32,22 @@
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu"
                 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <div class="menu-btn"></div>
+            <div class="menu-btn"></div>
+            <div class="menu-btn"></div>
         </button>
         <a class="navbar-brand col-sd-2" href="#"><img src="./img/logo.svg" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#call-info"
+        <button class="navbar-toggler call-btn navbar-collapse_call-btn" type="button" data-toggle="collapse" data-target="#call-info"
                 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fa fa-phone"></span>
+            <span class="fas fa-phone-square-alt"></span>
         </button>
         <div class="collapse navbar-collapse col-sd-6" id="main-menu">
+            <button class="navbar-toggler navbar-collapse_btn" type="button" data-toggle="collapse" data-target="#main-menu"
+                    aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="menu-btn"></div>
+                <div class="menu-btn"></div>
+                <div class="menu-btn"></div>
+            </button>
             <ul class="navbar-nav col-md-8">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
@@ -54,9 +62,9 @@
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                        aria-expanded="false">Клиентам</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Сублимация </a>
+                        <a class="dropdown-item" href="#">Наружняя реклама</a>
+                        <a class="dropdown-item" href="#">Выстовочное оборудование</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -73,12 +81,30 @@
 			</span>
         </div>
         <div class="collapse navbar-collapse col-sd-6" id="call-info">
+            <button class="navbar-toggler call-btn navbar-collapse_btn" type="button" data-toggle="collapse" data-target="#call-info"
+                    aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fas fa-phone-square-alt"></span>
+            </button>
             <ul class="navbar-nav col-md-8">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Доставка</a>
+                    <i class="fas fa-phone-alt"></i>
+                    <a class="nav-link" href="#">+7 701 756 46 91</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Контакты</a>
+                    <i class="fab fa-whatsapp"></i>
+                    <a class="nav-link" href="#">+7 701 756 46 91</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fas fa-envelope"></i>
+                    <a class="nav-link" href="#">ps_poletaev@mail.ru</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fas fa-envelope"></i>
+                    <a class="nav-link" href="#"> ps_yazeva@mail.ru</a>
+                </li>
+                <li class="nav-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <a class="nav-link" href="#">Адреса </a>
                 </li>
             </ul>
         </div>

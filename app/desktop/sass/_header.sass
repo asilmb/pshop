@@ -2,16 +2,29 @@ header
   height: 80px
   font-weight: 500
   color: #959595
+  .dropdown-menu
+    background: #D83135
+    .dropdown-item
+      color: #FFFFFF
+      background: #D83135
+      font-weight: 500
+
+      &:hover
+        color: #FFFFFF
+        background: #D83135
+        font-weight: 500
+        opacity: 0.8
 
 @media only screen and (min-width: 768px)
   header
     #call-info
-     display: none!important
+      display: none !important
 
 @media only screen and (max-width: 1099px)
   header
     .navbar-collapse_number
       display: none
+
     a.ps-btn
       width: 160px
       height: 35px
@@ -22,8 +35,56 @@ header
     .container
       display: flex
       justify-content: space-around
+
     a.ps-btn
       display: none
+
+    .navbar-toggler
+      border: none
+
+    .call-btn
+      font-size: 32px
+
+    .menu-btn
+      width: 36px
+      height: 6px
+      background-color: #959595
+      margin: 8px 0
+      border-radius: 1px
+
+    .nav-item
+      font-size: 18px
+    .navbar-collapse
+      position: absolute
+      background: white
+      width: 100%
+      top: 0
+      padding-top: 20px
+      .navbar-collapse_btn
+        position: absolute
+        right: 20px
+        top: 20px
+        z-index: 100000
+    #call-info
+      .nav-item
+        justify-content: left
+        display: flex
+        align-items: center
+        margin-bottom: 12px
+        padding-left: 20px
+
+        i
+          font-size: 32px
+
+        .nav-link
+          margin-left: 8px
+
+
+
+
+
+
+
 
 
 
