@@ -26,7 +26,7 @@ gulp.task('js', function() {
             console.log(e);
         }))
         .pipe(gulp.dest('./app/public/js'))
-        .pipe(gulp.dest('./public/js'));
+        // .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('sass', function() {
@@ -36,7 +36,7 @@ gulp.task('sass', function() {
         .pipe(autoprefixer(['last 15 versions']))
         .pipe(cleanCSS()) // Опционально, закомментировать при отладке
         .pipe(gulp.dest('./app/public/css'))
-        .pipe(gulp.dest('./public/css'))
+        // .pipe(gulp.dest('./public/css'))
         .pipe(browserSync.reload({stream: true}));
 });
 

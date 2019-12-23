@@ -2,19 +2,25 @@ header
   height: 80px
   font-weight: 500
   color: #959595
+  .dropdown-toggle::after
+    transition: transform 0.5s ease
+    border: 0
+    height: 12px
+    width: 12px
+    vertical-align: -0.155em
+    background: no-repeat
+    background-image: url("../img/btns/chevron-right-solid.svg")
+  .show > .dropdown-toggle::after
+    transform: rotate(-90deg)
   .dropdown-menu
-    background: #D83135
     .dropdown-item
-      color: #FFFFFF
-      background: #D83135
+      color: #959595
       font-weight: 500
-
       &:hover
         color: #FFFFFF
         background: #D83135
         font-weight: 500
         opacity: 0.8
-
 @media only screen and (min-width: 768px)
   header
     #call-info
@@ -65,6 +71,7 @@ header
         right: 20px
         top: 20px
         z-index: 100000
+        font-size: 32px
     #call-info
       .nav-item
         justify-content: left
@@ -72,12 +79,22 @@ header
         align-items: center
         margin-bottom: 12px
         padding-left: 20px
-
         i
           font-size: 32px
-
         .nav-link
           margin-left: 8px
+    .dropdown-menu
+      background: #D83135
+      border-radius: 0
+      .dropdown-item
+        color: #FFFFFF
+        background: #D83135
+        font-weight: 500
+        &:hover
+          color: #FFFFFF
+          background: #D83135
+          font-weight: 500
+          opacity: 0.8
 
 
 
