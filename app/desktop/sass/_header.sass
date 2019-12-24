@@ -1,4 +1,4 @@
-header
+header.navbar
   height: 80px
   font-weight: 500
   color: #959595
@@ -17,9 +17,8 @@ header
     .dropdown-item
       color: #959595
       font-weight: 500
-      height: 52px
-      padding-top: 16px
-      font-size: 18px
+      padding-bottom: 8px
+      padding-top: 8px
       &:hover
         color: #FFFFFF
         background: #D83135
@@ -64,8 +63,10 @@ header
 
     .nav-item
       font-size: 18px
-      height: 52px
-      padding-top: 16px
+      .nav-link
+        padding: 1rem 1rem
+        font-size: 18px
+
     .navbar-collapse
       position: absolute
       background: white
@@ -97,6 +98,8 @@ header
         color: #FFFFFF
         background: #D83135
         font-weight: 500
+        font-size: 18px
+        padding-top: 16px
         &:hover
           color: #FFFFFF
           background: rgba(207, 0, 0, 0.3)
