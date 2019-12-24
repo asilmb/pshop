@@ -13,14 +13,18 @@ header
   .show > .dropdown-toggle::after
     transform: rotate(-90deg)
   .dropdown-menu
+    padding: 0
     .dropdown-item
       color: #959595
       font-weight: 500
+      height: 52px
+      padding-top: 16px
+      font-size: 18px
       &:hover
         color: #FFFFFF
         background: #D83135
         font-weight: 500
-        opacity: 0.8
+        //opacity: 0.8
 @media only screen and (min-width: 768px)
   header
     #call-info
@@ -60,6 +64,8 @@ header
 
     .nav-item
       font-size: 18px
+      height: 52px
+      padding-top: 16px
     .navbar-collapse
       position: absolute
       background: white
@@ -70,7 +76,7 @@ header
         position: absolute
         right: 20px
         top: 20px
-        z-index: 100000
+        z-index: 999
         font-size: 32px
     #call-info
       .nav-item
@@ -85,6 +91,7 @@ header
           margin-left: 8px
     .dropdown-menu
       background: #D83135
+      z-index: 1000
       border-radius: 0
       .dropdown-item
         color: #FFFFFF
@@ -92,7 +99,7 @@ header
         font-weight: 500
         &:hover
           color: #FFFFFF
-          background: #D83135
+          background: rgba(207, 0, 0, 0.3)
           font-weight: 500
           opacity: 0.8
 
